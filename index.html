@@ -1,0 +1,694 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+
+  <title>Test-driven development/TDD/</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+
+
+  <link href="img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
+
+
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+
+
+  <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="assets/vendor/icofont/icofont.min.css" rel="stylesheet">
+  <link href="assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="assets/vendor/remixicon/remixicon.css" rel="stylesheet">
+  <link href="assets/vendor/line-awesome/css/line-awesome.min.css" rel="stylesheet">
+  <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
+  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
+  <link href="assets/vendor/aos/aos.css" rel="stylesheet">
+  <link href="assets/css/style.css" rel="stylesheet">
+
+  <!-- =======================================================
+  * Template Name: Selecao - v2.3.1
+  * Template URL: https://bootstrapmade.com/selecao-bootstrap-template/
+  * Author: BootstrapMade.com
+  * License: https://bootstrapmade.com/license/
+  * Created the content:Juhászné Kovács Ildikó & Rékási László
+  ======================================================== -->
+</head>
+
+<body>
+  <header id="header" class="fixed-top d-flex align-items-center  header-transparent ">
+
+    <div class="container d-flex align-items-center">
+
+      <div class="logo mr-auto">
+        <h1 class="text-light"><a href="index.html"><img src="img/logo2.jpg" alt="" class="img-fluid"></a></h1>
+      </div>
+
+      <nav class="nav-menu d-none d-lg-block">
+        <ul>
+          <li><a href="index.html#about">TDD alapok</a></li>
+          <li><a href="index.html#services">Egységtesztek</a></li>
+          <li><a href="index.html#portfolio">IntelliJ</a></li>
+          <li><a href="index.html#pricing">Refaktorálás</a></li>
+          <li class="drop-down"><a href="">Feladatok</a>
+            <ul>
+              <li><a href="intellij.html">Egységtesztek IntelliJ</a></li>
+              <li><a href="feladat1.html">1. Tesztelési feladat</a></li>
+              <li><a href="feladat2.html">2. Tesztelési feladat</a></li>
+              <li><a href="feladat3.html">3. Tesztelési feladat</a></li>
+              <li><a href="feladat4.html">4. Tesztelési feladat</a></li>
+            </ul>
+          </li>
+          <li><a href="linkek.html">Hasznos linkek</a></li>
+          <li><a href="index.html#faq">GYIK</a></li>
+          <li><a href="index.html#contact">Kapcsolat</a></li>
+
+        </ul>
+      </nav>
+
+    </div>
+  </header>
+
+
+  <section id="hero" class="d-flex flex-column justify-content-end align-items-center">
+    <div id="heroCarousel" class="container carousel carousel-fade" data-ride="carousel">
+
+
+      <div class="carousel-item active">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Összefoglaló a <span>Tesztelésről</span></h2>
+          <p class="animate__animated fanimate__adeInUp">Oldalunk kimondottan a <i><b>Java</b></i> programozási nyelvvel
+            foglalkozik, de ennek ellenére a tesztelés
+            más nyelv esetén is működik. A tesztelés a szoftverfejlesztés elengedhetetlen része. A
+            programozás humán tevékenység, melynek során a legnagyobb körültekintés ellenére is elkövetünk hibákat.
+            Ezért minden szoftvert alaposan tesztelni szükséges. Némely vállalatok dedikált tesztelőcsapattal dolgoznak.
+            A tesztelőknek ismerniük kell a tesztelés összes szintjén használható technológiákat, hogy...</p>
+          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tovább olvasom</a>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Egységtesztek</h2>
+          <p class="animate__animated animate__fadeInUp">Az egységtesztek a metódusokat tesztelik. Egy adott paraméterre
+            ismerjük a metódus visszatérési értékét, amiről a tesztünk megvizsgálja, hogy az megegyezik e az elvárttal.
+            Amennyiben igen, úgy sikeres a tesztünk.</p>
+          <a href="#services" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tovább olvasom</a>
+        </div>
+      </div>
+
+
+      <div class="carousel-item">
+        <div class="carousel-container">
+          <h2 class="animate__animated animate__fadeInDown">Refaktorálás</h2>
+          <p class="animate__animated animate__fadeInUp">Akkor kezdünk refaktorizálni, ha a tesztünk sikeresen lefutott.
+            Lényege, hogy a kész és jól működő metódusunkon olyan apró módosítások sorozatát végezzük el, amely során a
+            metódusunk olvashatósága, használhatósága, általában a harmadik szabályrendszernek megfelel.</p>
+          <a href="#pricing" class="btn-get-started animate__animated animate__fadeInUp scrollto">Tovább olvasom</a>
+        </div>
+      </div>
+
+      <a class="carousel-control-prev" href="#heroCarousel" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon bx bx-chevron-left" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+
+      <a class="carousel-control-next" href="#heroCarousel" role="button" data-slide="next">
+        <span class="carousel-control-next-icon bx bx-chevron-right" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
+
+    </div>
+
+    <svg class="hero-waves" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+      viewBox="0 24 150 28 " preserveAspectRatio="none">
+      <defs>
+        <path id="wave-path" d="M-160 44c30 0 58-18 88-18s 58 18 88 18 58-18 88-18 58 18 88 18 v44h-352z">
+      </defs>
+      <g class="wave1">
+        <use xlink:href="#wave-path" x="50" y="3" fill="rgba(255,255,255, .1)">
+      </g>
+      <g class="wave2">
+        <use xlink:href="#wave-path" x="50" y="0" fill="rgba(255,255,255, .2)">
+      </g>
+      <g class="wave3">
+        <use xlink:href="#wave-path" x="50" y="9" fill="#fff">
+      </g>
+    </svg>
+
+  </section>
+
+  <main id="main">
+
+
+    <section id="about" class="about">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Célok</h2>
+          <p>Miért is kell?...</p>
+        </div>
+
+        <div class="row content" data-aos="fade-up">
+          <div class="col-lg-6">
+            <p>
+              A tesztelés a szoftverfejlesztés elengedhetetlen része. A programozás humán tevékenység, melynek során a
+              legnagyobb körültekintés ellenére is elkövetünk hibákat.
+              Ezért minden szoftvert alaposan tesztelni szükséges. Némely vállalatok dedikált tesztelőcsapattal
+              dolgoznak. A tesztelőknek ismerniük kell a tesztelés összes szintjén használható technológiákat,
+              hogy az alkalmazást teljes körűen tesztelni tudják. Más esetekben a tesztelést maguk a fejlesztők végzik.
+              Az agilis módszertanok kiemelt hangsúlyt fektetnek arra, hogy a bugokat a fejlesztők korán megtalálják,
+              és javítsák.
+            </p>
+            <ul>
+              <h2>TDD 3 fő része:</h2>
+
+              <li><i class="ri-check-double-line"></i> Tesztelés</li>
+              <li><i class="ri-check-double-line"></i> Kódolás</li>
+              <li><i class="ri-check-double-line"></i> Refaktorálás</li>
+            </ul>
+          </div>
+          <div class="col-lg-6 pt-4 pt-lg-0">
+            <p>
+              Gyakran a tesztelés TDD módszerrel történik, és a tesztek már a kód előtt elkészülnek. A tanfolyam tehát
+              egyaránt hasznos fejlesztőknek és tesztelőknek is. A tanfolyam során megismerjük a teszteléshez
+              használt keretrendszereket és technikákat, és elsajátítjuk a TDD megközelítést és variánsait is.(forrás:<a
+                href="https://business.progmasters.hu/" target="_blanc"> Progmasters</a>)
+            </p>
+            <a href="#" class="btn-learn-more">Ugrás az elejére</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+
+    <section id="cta" class="cta">
+      <div class="container">
+
+        <div class="row" data-aos="zoom-out">
+          <div class="col-lg-9 text-center text-lg-left">
+            <h3>Tiszta kód</h3>
+            <p>"Szeretem, ha a kódom elegáns és hatékony. A logikája egyszerű
+              kell, hogy legyen, hogy nehezen bújjanak meg a hibák a kódban. A
+              függőségek legyenek minimálisak a könnyű karbantarthatóság
+              érdekében. A hibakezelés legyen teljes, a teljesítmény pedig közel
+              optimális, hogy ne kísértsen a kódot piszkító optimalizálásra. A
+              tiszta kód egy dolgot csinál, és azt jól."</p>
+          </div>
+          <div class="col-lg-3 cta-btn-container text-center">
+            <a class="cta-btn align-middle" href="https://hu.wikipedia.org/wiki/Bjarne_Stroustrup">Bjarne
+              Stroustrup<br>programozó</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="services" class="services">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Egységtesztek</h2>
+          <p>Miből áll?...</p>
+          Egységteszt (unit test): az egységek, komponensek tesztelése, hogy
+          megbizonyosodjunk a működésének helyességéről. Cél, hogy feltárja
+          nincsenek-e tévműködések, feltáratlan hibák a belső algoritmusban,
+          adatkezelésben. A komponensek más rendszer komponensektől
+          függetlenül vannak tesztelve. /az implementáló feladata, felelőssége/
+          (a mondat forrása:<a href="https://vik.wiki/Kezd%C5%91lap" target="_blanc"> VIK Viki</a>)
+        </div>
+
+        <div class="row">
+          <div class="col-lg-4 col-md-6">
+            <div class="icon-box" data-aos="zoom-in-left">
+              <div class="icon"><i class="las la-file-alt" style="color: #ff689b;"></i></div>
+              <h4 class="title">1, Értelmezési tartomány</a></h4>
+              <p class="description">Adott két halmaz. Ha az egyik halmazból kiemelek egy elemet, majd ahhoz
+                hozzárendelem a másik halmaz
+                egyetlen elemét, akkor ezt a hozzárendelést függvénynek nevezzük.
+                Amihez a függvény hozzá tud rendelni valamilyen értéket, azt nevezzük a függvény értelmezési
+                tartományának. Először is meghatározzuk a bemenet értelmezési tartományát.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5 mt-md-0">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="100">
+              <div class="icon"><i class="las la-file-alt" style="color: #e9bf06;"></i></div>
+              <h4 class="title">2, Értékkészlet</a></h4>
+              <p class="description">Meghatározzuk a kimenet érték készletét. Amiket hozzá tud rendelni az értelmezési
+                tartományhoz, amilyen értéket felvehet a függvény, azt nevezzük a függvény érték készletének.</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5 mt-lg-0 ">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="200">
+              <div class="icon"><i class="las la-file-alt" style="color: #3fcdc7;"></i></div>
+              <h4 class="title">3, Értékpárok</a></h4>
+              <p class="description">Értékpárok meghatározása, azaz adott bemenetre milyen kimenet legyen. Olyan
+                értékpárokat kell válogatni, amik jellemzőek az adott metódus, vagy másnéven függvény megvalósításához.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="300">
+              <div class="icon"><i class="las la-file-alt" style="color:#41cf2e;"></i></div>
+              <h4 class="title">4, Teszt megírása</a></h4>
+              <p class="description">Megírjuk a tesztesetek kiértékelését, illetve magát a tesztet is a teszt esetekkel.
+                A teszt esetek számossága annyi legyen, hogy minden eshetőségre legyen benne példa
+                értékpár.(reprezentatív esetek)</p>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="400">
+              <div class="icon"><i class="las la-file-alt" style="color: #d6ff22;"></i></div>
+              <h4 class="title">5, Implementáció</a></h4>
+              <p class="description">Implementációs kód elkészítése. A metódus megírása, azaz a függvény elkészítése.
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
+              <div class="icon"><i class="las la-file-alt" style="color: #4680ff;"></i></div>
+              <h4 class="title">6, Tesztelés</a></h4>
+              <p class="description">Tesztelünk... Ha jó, akkor haladunk tovább, ha hibás, akkor viszont vissza kell
+                lépni hibát keresni. Implementációs kód javítása, módosítása.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
+              <div class="icon"><i class="las la-file-alt" style="color: #41cf2e;"></i></div>
+              <h4 class="title">7, Refaktorálás</a></h4>
+              <p class="description">A refaktorizáció lényege, hogy a kész és jól működő metódusunkon olyan apró
+                módosítások sorozatát végezzük el,
+                amely során a metódusunk olvashatósága, használhatósága, általában a harmadik szabályrendszernek
+                megfelel.
+                A refaktorálás során a kódbázisunk egyes elemeinek a mérete lecsökken, olvashatósága növekszik, így a
+                rendszer karbantartása,
+                hibáinak feltárása, magas minőségen, alacsony költségen megvalósítható. Refaktorálás során a következő
+                főbb szempontokat kell betartani:
+                Törekedjünk az egyszerűségre, a nagy célokat bontsuk apró részcélok megvalósítására, legyen a cél
+                megvalósítás konkrét.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
+              <div class="icon"><i class="las la-file-alt" style="color: #e9bf06;"></i></div>
+              <h4 class="title">7b, Refaktorálási technikák</a></h4>
+              <p class="balra">
+                a, A metódus felbontása
+                <br>
+                -részfeladatok metódusba szervezése
+                <br>
+                -változó kiemelése
+                <br>
+                b, Viselkedések átcsoportosítása osztályok között
+                <br>
+                -új osztályba való szervezés
+                <br>
+                c, Adatok rendszerezése
+                <br>
+                -duplikátumok megszüntetése
+                <br>
+                -típusok megváltoztatása
+                <br>
+                d, Kifejezések egyszerűsítése
+                <br>
+                -bontsuk szét az if-ben lévő logikai kifejezést és legyen több if
+                <br>
+                -null elemek első lépésként történő lekezelése
+                <br>
+                e, Metódusok meghívásának egyszerűsítése
+                <br>
+                -paraméterek számának csökkentése
+                <br>
+                -nem használunk hibakódot ha nem indokolt(külső indok), hanem exception van
+                <br>
+                f,absztrakció (az általánosítás megvalósítása)
+                <br>
+                -ősosztályok készítése
+                <br>
+                -interfészek létrehozása
+              </p>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6 mt-5">
+            <div class="icon-box" data-aos="zoom-in-left" data-aos-delay="500">
+              <div class="icon"><i class="las la-file-alt" style="color: #4680ff;"></i></div>
+              <h4 class="title">8, Dokumentáció</a></h4>
+              <p class="balra">JAVA DOC<br>
+                JavaDoc Használható tagek:<br>
+                @author - osztályok és interfészek előtt<br>
+                @version - @author után<br>
+                @param - metódusoknál, konstruktoroknál is, mindenképp külön kell egy<br>
+                @return - nem void metódusoknál<br>
+                @exception - metódusoknál ha dob kivételt<br>
+                @see (nézd meg itt is)<br>
+                @serial<br>
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="portfolio" class="portfolio">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Fejlesztői környezet</h2>
+          <p>IntelliJ</p>
+        </div>
+
+
+        <div class="row portfolio-container" data-aos="fade-up">
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij1.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>IntelliJ Idea</h4>
+              <p>letöltés a honlapról...</p>
+              <a href="assets/img/intellij/intellij1.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="1. lépés"><i class="bx bx-plus"></i></a>
+              <a href="intellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij2.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Futtatás</h4>
+              <p>a telepítés első lépése...</p>
+              <a href="assets/img/intellij/intellij2.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="2. lépés"><i class="bx bx-plus"></i></a>
+              <a href="intellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij4.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Könyvtár kiválasztása</h4>
+              <p>maradhat az alapértelmezett mappa...</p>
+              <a href="assets/img/intellij/intellij4.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="3. lépés"><i class="bx bx-plus"></i></a>
+              <a href="intellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij5.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>32 vagy 64</h4>
+              <p>A paraméterek megadása...</p>
+              <a href="assets/img/intellij/intellij5.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="4. lépés"><i class="bx bx-plus"></i></a>
+              <a href="pintellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij6.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>install</h4>
+              <p>hozzáadás a START menühöz</p>
+              <a href="assets/img/intellij/intellij6.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="5. lépés"><i class="bx bx-plus"></i></a>
+              <a href="intellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij7.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Telepítés</h4>
+              <p>türelemmel várunk...</p>
+              <a href="assets/img/intellij/intellij7.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="6. lépés"><i class="bx bx-plus"></i></a>
+              <a href="intellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij8.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Kész!</h4>
+              <p>akár futtatható is...</p>
+              <a href="assets/img/intellij/intellij8.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="7. lépés"><i class="bx bx-plus"></i></a>
+              <a href="intellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-img"><img src="assets/img/intellij/intellij9.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>El kell fogadni</h4>
+              <p>a feltételeket, aztán...</p>
+              <a href="assets/img/intellij/intellij9.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="8. lépés"><i class="bx bx-plus"></i></a>
+              <a href="pintellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-img"><img src="assets/img/intellij/intelliproj.jpg" class="img-fluid" alt=""></div>
+            <div class="portfolio-info">
+              <h4>Tényleg kész!</h4>
+              <p>Jöhet az első projekt!</p>
+              <a href="assets/img/intellij/intelliproj.jpg" data-gall="portfolioGallery" class="venobox preview-link"
+                title="9. lépés"><i class="bx bx-plus"></i></a>
+              <a href="intellij.html" class="details-link" title="Bővebb infó"><i class="bx bx-link"></i></a>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+
+
+
+    <section id="pricing" class="pricing">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Refaktorálás</h2>
+          <p>Külön is említsük meg...</p>
+        </div>
+
+        <div class="row">
+
+          <p><b>Refaktorizáció</b>. Akkor kezdünk refaktorizálni, ha a tesztünk sikeresen lefutott.
+            Lényege, hogy a kész és jól működő metódusunkon olyan apró módosítások sorozatát végezzük el,
+            amely során a metódusunk olvashatósága, használhatósága, általában a harmadik szabályrendszernek megfelel.
+            A refaktorálás során a kódbázisunk egyes elemeinek a mérete lecsökken, olvashatósága növekszik, így a
+            rendszer karbantartása,
+            hibáinak feltárása, magas minőségen, alacsony költségen megvalósítható.
+            Refaktorálás során a következő főbb szempontokat kell betartani:
+            Törekedjünk az egyszerűségre, a nagy célokat bontsuk apró részcélok megvalósítására, legyen a cél
+            megvalósítás konkrét.</p>
+          <p><i><u>Refaktorálási technikák:</u></i><br><br>
+            <b>a,</b> A metódus felbontása<br>
+            -részfeladatok metódusba szervezése<br>
+            -változó kiemelése<br><br>
+            <b>b,</b> Viselkedések átcsoportosítása osztályok között<br>
+            -új osztályba való szervezés<br><br>
+            <b>c,</b> Adatok rendszerezése<br>
+            -duplikátumok megszüntetése<br>
+            -típusok megváltoztatása<br><br>
+            <b>d,</b> Kifejezések egyszerűsítése<br>
+            -bontsuk szét az if-ben lévő logikai kifejezést és legyen több if<br>
+            -null elemek első lépésként töténő lekezelése<br><br>
+            <b>e,</b> Metódusok meghívásának egyszerűsítése<br>
+            -paraméterek számának csökkentése<br>
+            -nem használunk hibakódot ha nem indokolt(külső indok), hanem exception van<br><br>
+            <b>f,</b> Absztrakció (az általánosítás megvalósítása)<br>
+            -ősosztályok készítése<br>
+            -interfészek létrehozása
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+
+    <section id="faq" class="faq">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>F.A.Q</h2>
+          <p>avagy a gyakran ismételt kérdések...</p>
+        </div>
+
+        <ul class="faq-list">
+
+          <li data-aos="fade-up" data-aos-delay="100">
+            <a data-toggle="collapse" class="" href="#faq1">Mi a neve a JUnit 5 -nek? <i
+                class="icofont-simple-up"></i></a>
+            <div id="faq1" class="collapse show" data-parent=".faq-list">
+              <p>
+                Egyszerűen ennyi : Jupiter
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="200">
+            <a data-toggle="collapse" href="#faq2" class="collapsed">Mi is az a JUnit? <i
+                class="icofont-simple-up"></i></a>
+            <div id="faq2" class="collapse" data-parent=".faq-list">
+              <p>
+                Egy szabad forráskódú modultesztelő rendszer, ami a JAVA programok automatizált teszteléséhez nyújt
+                segítséget.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="300">
+            <a data-toggle="collapse" href="#faq3" class="collapsed">Tesztek futtatásánál hányfajta eredmény lehetséges?
+              <i class="icofont-simple-up"></i></a>
+            <div id="faq3" class="collapse" data-parent=".faq-list">
+              <p>
+                HÁROM <br>
+                Sikeres(pass), azaz tesztünk sikeresen lefutott, minden feltétel teljesült. <br>
+                Sikertelen(fail), szintén lefutott a teszt, de valamelyik feltétel nem teljesült. <br>
+                HIBA(error), ha valami nagyobb hibába ütközik, például egy Exceptiont dobott valamelyik függvény.
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="400">
+            <a data-toggle="collapse" href="#faq4" class="collapsed">Milyen metódusok ellenőrzik, hogy a paraméterükben
+              megadott kifejezés igaz, vagy hamis? <i class="icofont-simple-up"></i></a>
+            <div id="faq4" class="collapse" data-parent=".faq-list">
+              <p>
+                assertTrue (boolean) - igaz-e? <br>
+                assertFalse (boolean) - hamis-e?
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="500">
+            <a data-toggle="collapse" href="#faq5" class="collapsed">Minek a rövidítése a TDD? <i
+                class="icofont-simple-up"></i></a>
+            <div id="faq5" class="collapse" data-parent=".faq-list">
+              <p>
+                Test-driven development, magyarul Tesztvezérelt fejlesztés
+              </p>
+            </div>
+          </li>
+
+          <li data-aos="fade-up" data-aos-delay="600">
+            <a data-toggle="collapse" href="#faq6" class="collapsed">Mennyi teszt esetet írjunk? <i
+                class="icofont-simple-up"></i></a>
+            <div id="faq6" class="collapse" data-parent=".faq-list">
+              <p>
+                A tesztesetek számossága annyi legyen, hogy minden eshetőségre legyen benne példa. (Reprezentatív
+                esetek)
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+      </div>
+    </section>
+
+
+    <section id="contact" class="contact">
+      <div class="container">
+
+        <div class="section-title" data-aos="zoom-out">
+          <h2>Kapcsolat</h2>
+          <p>Lépjen kapcsolatba Velünk!</p>
+        </div>
+
+        
+        <div class="row mt-5">
+
+          <div class="col-lg-4" data-aos="fade-right">
+            <div class="info">
+              <div class="address">
+                <i class="icofont-google-map"></i>
+                <h4>Nyíregyházi SzC Széchenyi István Technikum</h4>
+                <h4>113/c osztály</h4>
+                <p>Nyíregyháza, Városmajor u. 4.</p>
+              </div>
+
+              <div class="email">
+                <i class="icofont-envelope"></i>
+                <h4>Email:</h4>
+                <p><a href="mailto:koviildi82@gmail.com">koviildi82@gmail.com</p>
+                <p><a href="mailto:rekalaca@gmail.com">rekalaca@gmail.com</p>
+              </div>
+
+            </div>
+
+          </div>
+
+          <div class="col-lg-8 mt-5 mt-lg-0" data-aos="fade-left">
+
+
+          </div>
+
+        </div>
+
+      </div>
+    </section>    
+
+  </main>
+
+  <footer id="footer">
+    <div class="container">
+      <p>Juhászné Kovács Ildikó & Rékási László munkája</p>
+      <div class="credits">
+        Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a> & <a href="mailto:rekalaca@gmail.com">[
+          rekalaca ]</a>
+        <br>
+        <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc"
+            style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+          xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási
+          László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a
+          rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi
+          Licenc</a> alatt van.
+      </div>
+    </div>
+    <div id="ccright" class="ccright">
+      <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licenc"
+          style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br /><span
+        xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">Juhászné Kovács Ildikó & Rékási
+        László</span> <span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">TDD Edu</span> című műve <a
+        rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Nevezd meg! 4.0 Nemzetközi
+        Licenc</a> alatt van.
+    </div>
+  </footer>
+
+  <a href="#" class="back-to-top"><i class="ri-arrow-up-line"></i></a>
+
+
+  <script src="assets/vendor/jquery/jquery.min.js"></script>
+  <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
+  <script src="assets/vendor/php-email-form/validate.js"></script>
+  <script src="assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
+  <script src="assets/vendor/aos/aos.js"></script>
+
+
+  <script src="assets/js/main.js"></script>
+
+</body>
+
+</html>
